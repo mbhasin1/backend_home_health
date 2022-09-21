@@ -48,13 +48,19 @@ const db = mysql.createConnection({
                             res.status(500).send()
                         }
                         
-                        res.send(result);
+                        res.send({
+                            status: "200",
+                        })
 
                     }) 
 
             }
-            else { 
-                res.status(500).send()
+            else {
+                res.send({
+                    status: "400",
+                    message: "found a user with that log in"
+                })
+                //res.status(500).send()
                 console.log('found a user with that log in')
             }
         })
