@@ -99,6 +99,12 @@ const db = mysql.createConnection({
                 res.status(500).send()
             }
         }
+        else {
+            res.send({
+                status: "400",
+            })
+        }
+
     })
     
      
