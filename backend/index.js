@@ -5,7 +5,7 @@ const bodyparser = require("body-parser")
 const cors = require("cors")
 const app = express()
 const bcrypt = require('bcrypt')
-
+//console.log('test')
 
 app.use(cors());
 app.use(bodyparser.json());
